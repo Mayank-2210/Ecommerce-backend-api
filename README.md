@@ -1,6 +1,6 @@
-# Ecommerce Backend Clone — Node.js + Express + MongoDB
+# Ecommerce Backend — Node.js + Express + MongoDB
 
-Robust, scalable, and modular eCommerce backend built with **Node.js**, **Express**, and **MongoDB**, inspired by Flipkart’s core architecture.  
+Robust, scalable, and modular eCommerce backend built with **Node.js**, **Express**, and **MongoDB**.  
 Designed to power real-world eCommerce systems with features like JWT authentication, cart/order management, and Razorpay payment integration.
 
 ## Features
@@ -51,4 +51,16 @@ RAZORPAY_KEY_SECRET=your_razorpay_secret
 Import the included Postman collection.
 Use /auth/login to obtain a JWT token.
 Pass the token as Authorization: Bearer <token> for protected routes.
+
+## Security Notes
+API keys and secrets are loaded via .env and never committed to version control.
+Routes are protected with role-based middleware.
+Passwords are hashed with bcrypt before storage.
+
+## Design Principles
+Separation of Concerns: Clean controller-router-model structure.
+Reusable Middleware: Auth guards, admin checks, and error wrappers.
+Environment-Based Config: Works seamlessly for dev and production.
+Scalable & Extendable: Ready for features like wishlist, coupon codes, etc.
+
 
